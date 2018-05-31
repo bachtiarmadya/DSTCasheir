@@ -41,10 +41,10 @@ public class SplashScreen extends AppCompatActivity implements IsOnline.Connecti
             //show a No Internet Alert or Dialog
             AlertDialog.Builder checkBuilder = new AlertDialog.Builder(SplashScreen.this);
             checkBuilder.setIcon(R.drawable.warning);
-            checkBuilder.setTitle("No Connection!");
-            checkBuilder.setMessage("Periksa koneksi internet anda!");
+            checkBuilder.setTitle("Connection!");
+            checkBuilder.setMessage("No Internet Connection!");
 
-            checkBuilder.setPositiveButton("Ulangi", new DialogInterface.OnClickListener() {
+            checkBuilder.setPositiveButton("retry", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     Intent intent = getIntent();
@@ -52,7 +52,7 @@ public class SplashScreen extends AppCompatActivity implements IsOnline.Connecti
                     startActivity(intent);
                 }
             });
-            checkBuilder.setNegativeButton("Keluar", new DialogInterface.OnClickListener() {
+            checkBuilder.setNegativeButton("exit", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     finish();
